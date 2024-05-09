@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input{
+                height: 40px;
+            }
+            form input[type="number"]{
+                width: 300px;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Contact</h1>
+        <form action="/submit">
+            <div>
+                <label for="firstname">Name</label>
+                <input type="text" placeholder="Enter your name" required name="name" id="firstname">
+            </div>
+            <div>
+                <label for="phonenumber">Phone</label>
+                <input type="number" placeholder="Enter your number" required name="Phone" id="phonenumber">
+            </div>
+            <div>
+                <label for="emailaddress">Email</label>
+                <input type="email" placeholder="Enter your email" required name="email" id="emailaddress">
+            </div>
+            <div>
+                <label for="">Message</label>
+                <textarea name="" id="" placeholder="Enter your Message" required name="query"></textarea>
+            </div>
+            <div>
+                <label for="">Course Preferences</label>
+                <label for="">FE1</label>
+                <input type="checkbox" value="FE1" name="Course">
+                <label for="">FE2</label>
+                <input type="checkbox" value="FE2" name="Course">
+                <label for="">FE3</label>
+                <input type="checkbox" value="FE3" name="Course">
+            </div>
+            <div>
+                <label for="">Gender</label>
+                <label for="">Male</label>
+                <input type="radio" value="Male" name="Gender">
+                <label for="">Female</label>
+                <input type="radio" value="Female" name="Gender">
+                <label for="">Others</label>
+                <input type="radio" value="Others" name="Gender">
+            </div>
+            <div>
+                <label for="">Select City</label>
+                <select name="City" id="">
+                    <option value="blr">Bengalore</option>
+                    <option value="ndls">New Delhi</option>
+                    <option value="pune">Pune</option>
+                    <option value="lkw">Lucknow</option>
+                    <option value="ixd">Prayagraj</option>
+                    <option value="Ahm">Ahmedabad</option>
+                </select>
+                
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
+
+
+<!-- http://127.0.0.1:5500/class2/forms.html?name=Ashutosh+Mishra&Phone=9158423283&email=asmishra%40altimetrik.com -->

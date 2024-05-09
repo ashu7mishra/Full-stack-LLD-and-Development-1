@@ -7,3 +7,20 @@
 .firstUl li{
     color: chocolate;
 }
+ul.firstUl{
+    color: chocolate;
+}
+.randomChild li:first-child{
+    color: blueviolet;
+}
+.randomChild li:last-child{
+    color: rgb(25, 212, 90);
+}
+.randomChild li:nth-child(2){
+    color: rgb(237, 16, 222);
+}
+.firstUl > li b:hover{
+    color: cadetblue;
+    background-color: aliceblue;
+}
+
