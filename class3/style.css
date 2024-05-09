@@ -1,0 +1,9 @@
+#listSection{
+    background-color: rgb(227, 157, 157);
+}
+.listli{
+    width: 100%;
+}
+.firstUl li{
+    color: chocolate;
+}

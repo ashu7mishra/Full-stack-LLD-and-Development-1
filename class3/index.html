@@ -1,15 +1,28 @@
 <html>
     <head>
         <title>List Page</title>
+        <!-- SEO - Search Engine Optimization -->
+        <!-- internal css -->
+        <!-- <style>
+            #listSection{
+                background-color: red;
+            }
+            .listli{
+                width: 100%;
+            }
+        </style> -->
+        <!-- external css -->
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
-        <section id="listSection">
+        <section id="listSection" class="sectionForList">
             <h1>List Section</h1>
                 <ol>
                     <li class="listli">List1</li>
-                    <ul>
-                        <li>List1</li>
+                    <ul class="firstUl">
+                        <!-- inline style/css -->
+                        <li style="color: blueviolet; font-size: 30px;">List1</li>
                         <li>List2</li>
                         <li>List3</li>
                     </ul>
