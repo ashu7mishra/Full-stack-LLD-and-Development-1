@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            .item{
+                border:1px solid #ccc
+            }
+            .container{
+                border: 1px solid red;
+                height: 100vh;
+                display: grid;
+                grid-template-areas: 
+                "header header header header"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "sidebar main main main"
+                "footer footer footer footer";
+            }
+            .header{
+                grid-area: header;
+                background-color: red;
+            }
+            .sidebar{
+                grid-area: sidebar;
+                background-color: yellow;
+            }
+            .main{
+                grid-area: main;
+                background-color: blue;
+            }
+            .footer{
+                grid-area: footer;
+                background-color: green;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">Header</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="main">Main</div>
+            <div class="footer">Footer</div>
+            
+        </div> 
+    </body>
+</html>
