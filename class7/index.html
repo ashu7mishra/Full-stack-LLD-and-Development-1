@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="./index.css"> -->
+        <!-- rule 1 : css priority: inline >> internal >> external -->
+        <!-- rule 2 : The property which is applied later will override the existing one. -->
+        <!-- rule 3 : always calculate specificity, the one with highest specificity will be applied. -->
+        <!-- rule 4 : if !important is used, then it will have highest priority. -->
+        <style>
+            h1{
+                color: blue !important;
+            }
+            h1{
+                color: orange;
+            }
+            div{
+                color: brown;
+            }
+            .container h1{
+                color: purple;
+            }
+            div h1.title{
+                color: pink;
+            }
+            h2::before{
+                content: "Hi!!!";
+            }
+            h2::after{
+                content: "Hi!!!";
+            }
+            .title{
+                background-color: black;
+            }
+            h1{
+                background-color: aqua;
+            }
+        </style>
+        <!-- <link rel="stylesheet" href="./index.css"> -->
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- <h1 style="color: green;">Hello Everyone!!!</h1> -->
+            <h1 class="title">Hello Everyone!!!</h1>
+            <h2>---Ashutosh Mishra-----</h2>
+        </div>
+    </body>
+</html>
