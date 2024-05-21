@@ -29,20 +29,56 @@ var cartQuantity = 200;
 
 
 
-var g = "global scope";
-console.log('1 > ',g);
+// var g = "global scope";
+// console.log('1 > ',g);
 
-function outer(){
-    var o = "outer scope";
-    console.log('2 > ',g, o);
+// function outer(){
+//     var o = "outer scope";
+//     console.log('2 > ',g, o);
 
-    function inner(){
-        // console.log(i)
-        var i = "inner scope";
-        console.log('3 > ',g, o, i);
-        console.log(k);
-        k = 10;
+//     function inner(){
+//         // console.log(i)
+//         var i = "inner scope";
+//         console.log('3 > ',g, o, i);
+//         console.log(k);
+//         k = 10;
+//     }
+//     inner()
+// }
+// outer();
+
+// console.log(2+2+"2")
+
+// for (let i=0; i<5; i++){
+//     console.log(i);
+// }
+
+// for (; i<5; i++){
+//     console.log(i);
+// }
+
+// function sum(a,b){
+//     return a+b
+// }
+
+// console.log("sum : ", sum(1,2))
+
+// var total = function(a,b){
+//     return a+b
+// }
+
+// console.log("total : ", total(1,2))
+
+function sum(){
+    console.log(arguments);
+    var sum=0;
+    for (var i = 0; i<arguments.length; i++){
+        sum += arguments[i];
     }
-    inner()
+    return sum
 }
-outer();
+
+console.log(sum(1,2))
+console.log(sum(3,2,15))
+console.log(sum(1,2,3,4))
+console.log(sum(1))
