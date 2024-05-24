@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>List Page</title>
+        <!-- SEO - Search Engine Optimization -->
+        <!-- internal css -->
+        <!-- <style>
+            #listSection{
+                background-color: red;
+            }
+            .listli{
+                width: 100%;
+            }
+        </style> -->
+        <!-- external css -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <section id="listSection" class="sectionForList">
+            <h1>List Section</h1>
+                <ol>
+                    <li class="listli">List1</li>
+                    <ul class="firstUl">
+                        <!-- inline style/css -->
+                        <li style="color: blueviolet; font-size: 30px;"><b>List1</b></li>
+                        <li>List2</li>
+                        <li>List3</li>
+                        <ul>
+                            <!-- inline style/css -->
+                            <li>List1</li>
+                            <li>List2</li>
+                            <li>List3</li>
+                        </ul>
+                    </ul>
+                    <li class="listli">List2</li>
+                    <ul>
+                        <li>List1</li>
+                        <li>List2</li>
+                        <li>List3</li>
+                    </ul>
+                    <li class="listli">List3</li>
+                    <ul>
+                        <li>List1</li>
+                        <li>List2</li>
+                        <li>List3</li>
+                    </ul>
+                    <li class="listli">List4</li>
+                    <ul class="randomChild">
+                        <li>List1</li>
+                        <li>List2</li>
+                        <li>List3</li>
+                    </ul>
+                    <li class="listli">List5</li>
+                    <ul>
+                        <li>List1</li>
+                        <li>List2</li>
+                        <li>List3</li>
+                    </ul>
+                </ol>
+
+                <dl>
+                    <dt>title 1</dt>
+                    <dd>description 1</dd>
+                    <dt>title 2</dt>
+                    <dd>description 2</dd>
+                </dl>
+        </section>
+        <div>
+            <!-- <button class="darkModeButton" onclick="darkenBackground()">Dark Mode Button</button> -->
+            <button class="darkModeButton">Dark Mode Button</button>
+            <button class="textConfig">Change Text Font</button>
+        </div>
+        <script src="IntroToDOM.js"></script>
+        
+    </body>
+</html>
