@@ -9,16 +9,16 @@ h3Element.innerText = 'Ashutosh Mishra';
 const headingSection = document.querySelector('.randomChild');
 headingSection.appendChild(h3Element);
 
-flag = true;
+let darkmode = true;
 function darkenBackground(){
     var bodyRef = document.querySelector('body');
-    if (flag){
+    if (darkmode){
         bodyRef.style.backgroundColor = 'black';
-        flag = false;
+        darkmode = false;
         
     }else{
         bodyRef.style.backgroundColor = 'white';
-        flag = true;
+        darkmode = true;
     }
         
 }
@@ -44,9 +44,22 @@ function changeFont(item){
     item.style.fontSize = '500px';  
 }
 
+fontFlag = true;
 function changeFontSize(){
     var tagRef = document.getElementsByTagName('li');
-    tagRef.forEach(changeFont);
+    if (fontFlag){
+        for (i=0; i<tagRef.length; i++){
+            tagRef[i].style.fontSize = '10px'; 
+        }
+        fontFlag = false;
+
+    }else{
+        for (i=0; i<tagRef.length; i++){
+            tagRef[i].style.fontSize = '15px'; 
+        }
+        fontFlag = true;
+    }
+    
       
 }
 
@@ -57,5 +70,3 @@ textConfsel.addEventListener('click', function(){
     // alert('Dark Mode ON');
     
 });
-
-changeFontSize();
