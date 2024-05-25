@@ -13,7 +13,7 @@ let darkmode = true;
 function darkenBackground(){
     var bodyRef = document.querySelector('body');
     if (darkmode){
-        bodyRef.style.backgroundColor = 'black';
+        bodyRef.style.backgroundColor = 'gray';
         darkmode = false;
         
     }else{
@@ -49,13 +49,15 @@ function changeFontSize(){
     var tagRef = document.getElementsByTagName('li');
     if (fontFlag){
         for (i=0; i<tagRef.length; i++){
-            tagRef[i].style.fontSize = '10px'; 
+            // tagRef[i].style.fontSize = '10px'; 
+            tagRef[i].style.color = 'red'; 
         }
         fontFlag = false;
 
     }else{
         for (i=0; i<tagRef.length; i++){
-            tagRef[i].style.fontSize = '15px'; 
+            // tagRef[i].style.fontSize = '15px'; 
+            tagRef[i].style.color = 'green'; 
         }
         fontFlag = true;
     }
@@ -69,4 +71,22 @@ textConfsel.addEventListener('click', function(){
     changeFontSize();
     // alert('Dark Mode ON');
     
+});
+
+function changeColorOnMouseHover(){
+    const h1List = document.getElementById('heading');
+    h1List.style.backgroundColor = 'yellow';
+}
+
+function resetColorOnMouseHover(){
+    const h1List = document.getElementById('heading');
+    h1List.style.backgroundColor = 'transparent';
+}
+
+document.querySelector('#heading').addEventListener('mouseover',function(){
+    changeColorOnMouseHover();
+});
+
+document.querySelector('#heading').addEventListener('mouseout',function(){
+    resetColorOnMouseHover();
 });
