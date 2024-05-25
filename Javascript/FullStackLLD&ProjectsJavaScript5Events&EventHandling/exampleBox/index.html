@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            .box{
+                min-width: 100px;
+                min-height: 100px;
+                border: 5px solid #ccc;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box level1">
+            Level 1
+            <div class="box level2">
+                Level 2
+                <div class="box level3">
+                    Level3
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('click', function(){
+                alert('document')
+            });
+            const level1Ref = document.querySelector('.level1');
+            level1Ref.addEventListener('click', (e) => {
+                alert(e.currentTarget.className);
+            });
+            const level2Ref = document.querySelector('.level2');
+            level2Ref.addEventListener('dblclick', (e) => {
+                alert(e.currentTarget.className)
+            });
+            const level3Ref = document.querySelector('.level3');
+            level3Ref.addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert(e.currentTarget.className)
+            });
+        </script>
+    </body>
+</html>
