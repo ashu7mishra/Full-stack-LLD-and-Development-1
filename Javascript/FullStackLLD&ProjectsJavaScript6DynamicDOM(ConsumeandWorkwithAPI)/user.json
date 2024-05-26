@@ -1,0 +1,14 @@
+{
+    "name": "Ashutosh Mishra",
+    "address":{
+        "permanentAddress":{
+            "pincode":211008
+        },
+        "currentAddress":{
+            "pincode":411057
+        }
+    },
+    "techStack":["Python","HTML","CSS","JS"],
+    "kids": null,
+    "isEmployed":true
+}
