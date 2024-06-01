@@ -62,7 +62,7 @@ function getSelectedClassPriority() {
 }
 
 function removeSelectedClassFromBox() {
-  priorityBoxesRef.forEach(singleBoxRef, function () {
+  priorityBoxesRef.forEach(function(singleBoxRef) {
     singleBoxRef.classList.remove("selected");
   });
 }
@@ -71,11 +71,11 @@ function addSelectedClassToCurrentBox(boxRef) {
   boxRef.classList.add("selected");
 }
 
-priorityBoxesRef.forEach(function (boxRef) {
-  boxRef.addEventListener("click", function (ev) {
-    // remove selected class from all box
-    removeSelectedClassFromBox();
-    // add selected class to current box
-    addSelectedClassToCurrentBox(ev.target);
-  });
+priorityBoxesRef.forEach(function(boxRef) {
+    boxRef.addEventListener('click', function(ev) {
+        // remove selected class from all box
+        removeSelectedClassFromBox();
+        // add selected class to current box
+        addSelectedClassToCurrentBox(ev.target);
+    })
 });
