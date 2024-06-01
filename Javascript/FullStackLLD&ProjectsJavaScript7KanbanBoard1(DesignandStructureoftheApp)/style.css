@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto Serif", serif;
+}
+
+header {
+    background-color: #4b4b4b;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+.priority-filter{
+    display: flex;
+    flex-direction: row;
+    background-color: #3d3d3d;
+    height: 60px;
+    margin-left: 40px;
+}
+
+.priority-filter .box{
+    height: 40px;
+    width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.priority-filter .box:hover{
+    /* background-color: greenyellow; */
+    border: 2px solid #ffffff;
+}
+
+.priority-filter .box.p1{
+    background-color: pink;
+}
+
+.priority-filter .box.p2{
+    background-color: seagreen;
+}
+
+.priority-filter .box.p3{
+    background-color: cornflowerblue;
+}
+
+.priority-filter .box.p4{
+    background-color: black;
+}
+
+.quick-action{
+    display: flex;
+    flex-direction: row;
+    background-color: #3d3d3d;
+    height: 60px;
+    width: 50px;
+    margin-left: 50px;
+}
+
+.quick-action .icon{
+    font-size: 40px;
+    padding: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.quick-action .icon.add{
+    color: rgb(156, 156, 223);
+}
+
+.quick-action .icon.delete{
+    color: rgb(245, 59, 124);
+}
+
+.quick-action .icon:hover{
+    background-color: greenyellow;
+}
+
+main h1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.model{
+    width: 50vw;
+    height: 50vh;
+    background-color: #dfe4ea;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+}
+
+.model .left-section{
+    width: calc(100%, -80px);
+    display: flex;
+    height: 100%;
+}
+
+.model .right-section{
+    width: 80px;
+    display: flex;
+    height: 100%;
+    background-color: #4b4b4b;
+}
+
+.model .left-section textarea{
+    width: 100%;
+    background-color: transparent;
+}
+
+.model .priority-filter{
+    flex-direction: column;
+    margin-left: 0px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+,model .priority-filter .box{
+    width: 100%;
+}
+
