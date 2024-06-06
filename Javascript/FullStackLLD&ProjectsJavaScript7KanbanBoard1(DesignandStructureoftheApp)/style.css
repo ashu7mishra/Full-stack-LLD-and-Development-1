@@ -157,3 +157,57 @@ main h1 {
 .hide {
   display: none;
 }
+
+.ticket-section{
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.ticket-container{
+  width: 200px;
+  min-height: 100px;
+  background-color: #ccc;
+}
+
+.ticket-container .ticket-priority{
+  display: flex;
+  height: 10px;
+}
+
+.ticket-container .ticket-priority.p1{
+  display: flex;
+  height: 10px;
+}
+
+.ticket-container .ticket-priority.p2{
+  display: flex;
+  height: 10px;
+}
+
+.ticket-container .ticket-priority.p3{
+  display: flex;
+  height: 10px;
+}
+
+.ticket-container .ticket-priority.p4{
+  display: flex;
+  height: 10px;
+}
+
+.ticket-container .ticket-id{
+  display: flex;
+  height: 30px;
+  background-color: yellow;
+}
+
+.ticket-container .ticket-content{
+  display: flex;
+  height: 100px;
+}
+
+.ticket-container .ticket-lock{
+  display: flex;
+  height: 10px;
+}
