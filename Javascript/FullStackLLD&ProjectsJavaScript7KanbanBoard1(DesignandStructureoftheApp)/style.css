@@ -6,6 +6,13 @@
   font-family: "Roboto Serif", serif;
 }
 
+:root{
+  --p1: pink;
+  --p2: seagreen;
+  --p3: cornflowerblue;
+  --p4: black;
+}
+
 header {
   background-color: #4b4b4b;
   height: 80px;
@@ -38,19 +45,19 @@ header {
 }
 
 .priority-filter .box.p1 {
-  background-color: pink;
+  background-color: var(--p1);
 }
 
 .priority-filter .box.p2 {
-  background-color: seagreen;
+  background-color: var(--p2);
 }
 
 .priority-filter .box.p3 {
-  background-color: cornflowerblue;
+  background-color: var(--p3);
 }
 
 .priority-filter .box.p4 {
-  background-color: black;
+  background-color: var(--p4);
 }
 
 .quick-action {
@@ -177,23 +184,19 @@ main h1 {
 }
 
 .ticket-container .ticket-priority.p1{
-  display: flex;
-  height: 10px;
+  background-color: var(--p1);
 }
 
 .ticket-container .ticket-priority.p2{
-  display: flex;
-  height: 10px;
+  background-color: var(--p2);
 }
 
 .ticket-container .ticket-priority.p3{
-  display: flex;
-  height: 10px;
+  background-color: var(--p3);
 }
 
 .ticket-container .ticket-priority.p4{
-  display: flex;
-  height: 10px;
+  background-color: var(--p4);
 }
 
 .ticket-container .ticket-id{
