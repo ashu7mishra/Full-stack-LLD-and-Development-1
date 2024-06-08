@@ -210,6 +210,17 @@ main h1 {
   height: 100px;
 }
 
+.ticket-container .ticket-content textarea{
+  display: flex;
+  width: 100%;
+  background: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  /* pointer-events: none; */
+  padding: 5px;
+}
+
 .ticket-container .ticket-lock{
   display: flex;
   height: 10px;

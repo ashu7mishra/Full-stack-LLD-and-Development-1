@@ -47,6 +47,7 @@ textareaRef.addEventListener("keyup", function (ev) {
       priority: priority,
     });
     console.log(tasks);
+    listTickets(tasks);
     closeModel();
   }
 });
@@ -79,3 +80,23 @@ priorityBoxesRef.forEach(function(boxRef) {
         addSelectedClassToCurrentBox(ev.target);
     })
 });
+
+function createTicket(){
+  return `
+  <div class="ticket-container">
+    <div class="ticket-priority p1"></div>
+    <div class="ticket-id"></div>
+    <div class="ticket-content">
+        <textarea></textarea>
+    </div>
+    <div class="ticket-lock"></div>
+</div>
+`;
+}
+
+function listTickets(tasks){
+  tasks.forEach((tasks) => {
+    console.log(tasks);
+  })
+
+}
