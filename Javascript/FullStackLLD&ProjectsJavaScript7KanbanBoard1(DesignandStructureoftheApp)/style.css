@@ -225,3 +225,11 @@ main h1 {
   display: flex;
   height: 10px;
 }
+
+.ticket-container .ticket-lock{
+
+}
+
+.ticket-container .ticket-lock.locked .fa-lock-keyhole-open{
+  display: none;
+}

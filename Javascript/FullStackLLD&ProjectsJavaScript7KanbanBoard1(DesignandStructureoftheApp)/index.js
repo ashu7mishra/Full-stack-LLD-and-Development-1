@@ -5,6 +5,7 @@ const closeModelButtonRef = document.querySelector(
 );
 const textareaRef = document.querySelector(".model textarea");
 const priorityBoxesRef = document.querySelector(".model .right-section .box");
+const ticketSectionRef = document.querySelector('.ticket-section');
 
 const tasks = [];
 
@@ -81,22 +82,37 @@ priorityBoxesRef.forEach(function(boxRef) {
     })
 });
 
-function createTicket(){
+function createTicket(tasks){
   return `
   <div class="ticket-container">
-    <div class="ticket-priority p1"></div>
-    <div class="ticket-id"></div>
+    <div class="ticket-priority p1">${ticket.priority}</div>
+    <div class="ticket-id">${ticket.id}</div>
     <div class="ticket-content">
-        <textarea></textarea>
+        <textarea disabled>${ticket.description}</textarea>
     </div>
-    <div class="ticket-lock"></div>
+    <div class="ticket-lock locked">
+    <i class="fa-duotone fa-lock-keyhole"></i>
+    <i class="fa-duotone fa-lock-keyhole-open"></i>
+    </div>
 </div>
 `;
 }
 
-function listTickets(tasks){
-  tasks.forEach((tasks) => {
-    console.log(tasks);
-  })
 
+
+
+function clearList(){
+  ticketSectionRef.innerHTML = '';
+}
+
+function listTickets(tickets){
+  clearList();
+  tasks.forEach((tickets) => {
+    console.log(tickets);
+    const ticketContainerRef = document.createElement('div');
+    ticketContainerRef.setAttribute('class', 'ticket-container');
+    const ticketHTML = createTicket(tickets);
+    ticketContainerRef.innerHTML = ticketHTML;
+    ticketSectionRef.appendChild(ticketContainerRef);
+  })
 }
