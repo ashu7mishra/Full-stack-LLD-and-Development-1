@@ -106,6 +106,7 @@ main h1 {
   left: 50%;
   top: 50%;
   display: flex;
+  z-index: 1;
 }
 
 .model .left-section {
@@ -221,15 +222,29 @@ main h1 {
   padding: 5px;
 }
 
-.ticket-container .ticket-lock{
-  display: flex;
-  height: 10px;
+.ticket-container{
+  position: relative;
 }
 
 .ticket-container .ticket-lock{
-
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
 }
 
-.ticket-container .ticket-lock.locked .fa-lock-keyhole-open{
+.ticket-container .ticket-lock .fa-lock-open{
+  display: block;
+}
+
+.ticket-container .ticket-lock .fa-lock{
   display: none;
+}
+
+.ticket-container .ticket-lock.locked .fa-lock-open{
+  display: none;
+}
+
+.ticket-container .ticket-lock.locked .fa-lock{
+  display: block;
 }

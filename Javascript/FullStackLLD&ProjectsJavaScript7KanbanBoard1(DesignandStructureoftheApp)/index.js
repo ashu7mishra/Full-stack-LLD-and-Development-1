@@ -91,15 +91,12 @@ function createTicket(tasks){
         <textarea disabled>${ticket.description}</textarea>
     </div>
     <div class="ticket-lock locked">
-    <i class="fa-duotone fa-lock-keyhole"></i>
-    <i class="fa-duotone fa-lock-keyhole-open"></i>
+      <i class="fa-solid fa-lock"></i>
+      <i class="fa-solid fa-lock-open"></i>
     </div>
 </div>
 `;
 }
-
-
-
 
 function clearList(){
   ticketSectionRef.innerHTML = '';
@@ -116,3 +113,5 @@ function listTickets(tickets){
     ticketSectionRef.appendChild(ticketContainerRef);
   })
 }
+
+
