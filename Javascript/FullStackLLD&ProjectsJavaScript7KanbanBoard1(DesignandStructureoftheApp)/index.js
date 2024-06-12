@@ -7,7 +7,23 @@ const textareaRef = document.querySelector(".model textarea");
 const priorityBoxesRef = document.querySelector(".model .right-section .box");
 const ticketSectionRef = document.querySelector('.ticket-section');
 
-const tasks = [];
+const tasks = [
+  {
+    id: "1",
+    description: "task 1",
+    priority: "p1",
+  },
+  {
+    id: "2",
+    description: "task 2",
+    priority: "p2",
+  },
+  {
+    id: "3",
+    description: "task 3",
+    priority: "p3",
+  }
+];
 
 const newTask = {
   id: "",
@@ -82,7 +98,7 @@ priorityBoxesRef.forEach(function(boxRef) {
     })
 });
 
-function createTicket(tasks){
+function createTicket(ticket){
   return `
   <div class="ticket-container">
     <div class="ticket-priority p1">${ticket.priority}</div>
@@ -108,10 +124,38 @@ function listTickets(tickets){
     console.log(tickets);
     const ticketContainerRef = document.createElement('div');
     ticketContainerRef.setAttribute('class', 'ticket-container');
+    ticketContainerRef.setAttribute('data-id', tickets.id)
     const ticketHTML = createTicket(tickets);
     ticketContainerRef.innerHTML = ticketHTML;
     ticketSectionRef.appendChild(ticketContainerRef);
   })
 }
+
+ticketSectionRef.addEventListener('click', function(ev){
+  if ([...ev.target.classList].includes('fa-solid')){
+    console.log(ev.target);
+    const currentTicketContainerRef = ev.target.closest('.ticket-container');
+    console.log(currentTicketContainerRef);
+    const currentTicketId = currentTicketContainerRef.getAttribute('data-id');
+    console.log(currentTicketId);
+    const currentTextAreaRef = currentTicketContainerRef.querySelector('.ticket-content testArea');
+    const lockRef = currentTicketContainerRef.querySelector('.ticket-lock');
+    const isEditable = lockRef.classList.contains('locked');
+    if (isEditable){
+      lockRef.classList.remove('locked');
+      currentTextAreaRef.removeAttribute('disabled');
+    } else {
+      lockRef.classList.add('locked');
+      currentTextAreaRef.setAttribute('disabled',true);
+    }
+    console.log(isEditable)
+  }
+})
+
+ticketSectionRef.addEventListener('blur', function(ev) {
+  console.log(ev);
+})
+
+listTickets(tasks);
 
 
