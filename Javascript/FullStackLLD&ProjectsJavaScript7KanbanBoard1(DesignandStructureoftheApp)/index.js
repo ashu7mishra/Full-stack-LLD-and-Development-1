@@ -128,7 +128,22 @@ function listTickets(tickets){
     const ticketHTML = createTicket(tickets);
     ticketContainerRef.innerHTML = ticketHTML;
     ticketSectionRef.appendChild(ticketContainerRef);
-  })
+    const textAreaRef = ticketContainerRef.querySelector('.ticket-content testArea');
+    textAreaRef.addEventListener('blur', function(ev) {
+      const currentTicketContainerRef = ev.target.closest('.ticket-container');
+      // console.log(currentTicketContainerRef);
+      const currentTicketId = currentTicketContainerRef.getAttribute('data-id');
+      console.log(currentTicketId);
+      updateTaskDescription();
+    });
+  });
+}
+
+function updateTaskDescription(id, updatedDescription){
+  console.log(id, description);
+  const selectedTask = tasks.find((task) => task.id == id);
+  selectedTask.description = updatedDescription;
+  console.log(tasks);
 }
 
 ticketSectionRef.addEventListener('click', function(ev){
@@ -150,11 +165,7 @@ ticketSectionRef.addEventListener('click', function(ev){
     }
     console.log(isEditable)
   }
-})
-
-ticketSectionRef.addEventListener('blur', function(ev) {
-  console.log(ev);
-})
+});
 
 listTickets(tasks);
 
