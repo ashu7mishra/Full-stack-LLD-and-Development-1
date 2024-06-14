@@ -7,23 +7,50 @@ const textareaRef = document.querySelector(".model textarea");
 const priorityBoxesRef = document.querySelector(".model .right-section .box");
 const ticketSectionRef = document.querySelector('.ticket-section');
 
-const tasks = [
-  {
-    id: "1",
-    description: "task 1",
-    priority: "p1",
-  },
-  {
-    id: "2",
-    description: "task 2",
-    priority: "p2",
-  },
-  {
-    id: "3",
-    description: "task 3",
-    priority: "p3",
+let tasks;
+
+function initializeLocalStorage(){
+  const tasks = getTasksFromLocalStorage();
+  if (!tasks){
+    updateTasksInLocalStorage([
+      {
+        id: "1",
+        description: "task 1",
+        priority: "p1",
+      },
+      {
+        id: "2",
+        description: "task 2",
+        priority: "p2",
+      },
+      {
+        id: "3",
+        description: "task 3",
+        priority: "p3",
+      }
+    ]);
+    tasks = getTasksFromLocalStorage();
   }
-];
+
+}
+
+// const tasks = [
+//   {
+//     id: "1",
+//     description: "task 1",
+//     priority: "p1",
+//   },
+//   {
+//     id: "2",
+//     description: "task 2",
+//     priority: "p2",
+//   },
+//   {
+//     id: "3",
+//     description: "task 3",
+//     priority: "p3",
+//   }
+// ];
 
 const newTask = {
   id: "",
@@ -143,6 +170,7 @@ function updateTaskDescription(id, updatedDescription){
   console.log(id, description);
   const selectedTask = tasks.find((task) => task.id == id);
   selectedTask.description = updatedDescription;
+  updateTasksInLocalStorage(tasks);
   console.log(tasks);
 }
 
@@ -169,4 +197,11 @@ ticketSectionRef.addEventListener('click', function(ev){
 
 listTickets(tasks);
 
+function updateTasksInLocalStorage(tasks) {
+  localStorage.setItem('tasks',JSON.stringify(tasks));
+}
 
+function getTasksFromLocalStorage(){
+  const tasksData = localStorage.getItem('tasks');
+  return tasksData ? JSON.parse(tasksData) : undefined;
+}
