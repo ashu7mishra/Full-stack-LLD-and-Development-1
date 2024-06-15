@@ -173,6 +173,10 @@ main h1 {
   flex-wrap: wrap;
 }
 
+.ticket-section.enable-delete .ticket-delete {
+  display: none;
+}
+
 .ticket-container{
   width: 200px;
   min-height: 100px;
@@ -229,6 +233,13 @@ main h1 {
 .ticket-container .ticket-lock{
   position: absolute;
   right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.ticket-delete{
+  position: absolute;
+  left: 10px;
   bottom: 10px;
   cursor: pointer;
 }

@@ -34,6 +34,8 @@ function initializeLocalStorage(){
 
 }
 
+initializeLocalStorage();
+
 // const tasks = [
 //   {
 //     id: "1",
@@ -92,6 +94,7 @@ textareaRef.addEventListener("keyup", function (ev) {
     });
     console.log(tasks);
     listTickets(tasks);
+    updateTasksInLocalStorage(tasks);
     closeModel();
   }
 });
@@ -136,6 +139,9 @@ function createTicket(ticket){
     <div class="ticket-lock locked">
       <i class="fa-solid fa-lock"></i>
       <i class="fa-solid fa-lock-open"></i>
+    </div>
+    <div class="ticket-delete">
+      <i class="fa-solid fa-trash"></i>
     </div>
 </div>
 `;
