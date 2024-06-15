@@ -82,8 +82,12 @@ header {
   color: rgb(156, 156, 223);
 }
 
+.quick-action .icon.delete.enabled {
+  color: red;
+}
+
 .quick-action .icon.delete {
-  color: rgb(245, 59, 124);
+  color: white;
 }
 
 .quick-action .icon:hover {
@@ -174,6 +178,10 @@ main h1 {
 }
 
 .ticket-section.enable-delete .ticket-delete {
+  display: block;
+}
+
+.ticket-section.enable-delete {
   display: none;
 }
 

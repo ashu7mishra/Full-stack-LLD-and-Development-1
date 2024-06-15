@@ -6,6 +6,9 @@ const closeModelButtonRef = document.querySelector(
 const textareaRef = document.querySelector(".model textarea");
 const priorityBoxesRef = document.querySelector(".model .right-section .box");
 const ticketSectionRef = document.querySelector('.ticket-section');
+const deleteDivRef = document.querySelector('.quick-action .icon.delete');
+const deleteIconRef = document.querySelector('.quick-action .icon.delete .fa-trash');
+
 
 let tasks;
 
@@ -199,9 +202,22 @@ ticketSectionRef.addEventListener('click', function(ev){
     }
     console.log(isEditable)
   }
+
+  if ([...ev.target.classList].includes('fa-solid')){
+    const currentTicketContainerRef = ev.target.closest('.ticket-container');
+    const taskId = currentTicketContainerRef.getAttribute('data-id');
+    console.log(taskId);
+  }
 });
 
 listTickets(tasks);
+
+function deleteTask(taskId){
+  //delete task from tasks
+  tasks = tasks.filter(task => task.id !== taskId);
+  //update in local storage
+  updateTasksInLocalStorage(tasks);
+}
 
 function updateTasksInLocalStorage(tasks) {
   localStorage.setItem('tasks',JSON.stringify(tasks));
@@ -211,3 +227,14 @@ function getTasksFromLocalStorage(){
   const tasksData = localStorage.getItem('tasks');
   return tasksData ? JSON.parse(tasksData) : undefined;
 }
+
+deleteDivRef.addEventListener('click', function(ev) {
+  const isDeleteEnabled = ev.currentTarget.classList.contains('enabled')
+  if (!isDeleteEnabled){
+    ev.target.classList.add('enabled');
+    ticketSectionRef.classList.add('enable-delete');
+  } else{
+    ev.target.classList.remove('enabled');
+    ticketSectionRef.classList.remove('enable-delete');
+  }
+});
