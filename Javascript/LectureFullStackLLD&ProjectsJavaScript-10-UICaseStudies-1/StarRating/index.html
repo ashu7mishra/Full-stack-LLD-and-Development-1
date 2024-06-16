@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Star Rating</title>
+    <style>
+        #rating-section{
+            display: flex;
+        }
+        .rating-box{
+            width: 60px;
+            height: 60px;
+            font-size: 60px;
+        }
+        .empty-star::before{
+            content: '☆';
+        }
+        .fulled-star::before{
+            content: '★';
+        }
+        .reset{
+            display: flex;
+            margin: 30px;
+            font-size: 30px;
+        }
+        .smiley{
+            display: flex;
+            padding-top: 30px;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section id="rating-section">
+        <!-- <div class="rating-box fulled-star"></div>
+        <div class="rating-box empty-star"></div>
+        <div class="rating-box empty-star"></div>
+        <div class="rating-box empty-star"></div>
+        <div class="rating-box empty-star"></div> -->
+    </section>
+    <button class="reset">Reset</button>
+    <div class="smiley"></div>
+    <script src="index.js"></script>
+
+</body>
+</html>
