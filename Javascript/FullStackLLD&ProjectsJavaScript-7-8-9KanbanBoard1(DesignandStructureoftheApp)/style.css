@@ -267,3 +267,10 @@ main h1 {
 .ticket-container .ticket-lock.locked .fa-lock{
   display: block;
 }
+
+.clear-filter{
+  margin-left: 15px;
+  padding: 10px;
+  color: red;
+  font: bold;
+}

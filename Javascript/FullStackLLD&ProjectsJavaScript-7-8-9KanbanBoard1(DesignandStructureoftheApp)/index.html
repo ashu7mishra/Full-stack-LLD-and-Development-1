@@ -4,6 +4,7 @@
         <link href="./style.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
     </head>
     <body>
         <header>
@@ -17,6 +18,7 @@
                 <div class="icon add"><i class="fas fa-plus"></i></div>
                 <div class="icon delete"><i class="fa-sharp fa-solid fa-xmark"></i></div>
             </div>
+            <button class="clear-filter">Clear</button>
         </header>
         <main>
             <section>
@@ -32,10 +34,10 @@
                             <i class="fa-sharp fa-solid fa-xmark"></i>
                         </div>
                         <div class="priority-filter">
-                            <div class="box p1"></div>
-                            <div class="box p2"></div>
-                            <div class="box p3"></div>
-                            <div class="box p4 selected"></div>
+                            <div class="box p1" id="p1"></div>
+                            <div class="box p2" id="p2"></div>
+                            <div class="box p3" id="p3"></div>
+                            <div class="box p4 selected" id="p4"></div>
                         </div>
                     </div>
                 </div>

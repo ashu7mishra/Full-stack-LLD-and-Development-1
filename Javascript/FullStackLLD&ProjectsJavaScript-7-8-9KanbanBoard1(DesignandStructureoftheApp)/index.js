@@ -211,10 +211,6 @@ ticketSectionRef.addEventListener('click', function(ev){
     deleteTask(taskId);
     console.log(taskId);
   }
-
-  if (ev.target.classList.contains('ticket-priority')) {
-
-  }
 });
 
 listTickets(tasks);
@@ -252,14 +248,8 @@ priorityFilterRef.addEventListener('click', function(ev){
     const filteredTasks = tasks.filter(task => task.priority === selectedPriority);
     listTickets(filteredTasks);
   }
-});
+})
 
 clearFilterRef.addEventListener('click', function(ev){
   listTickets(tasks);
-});
-
-function changePriority(){
-  // change in DOM
-  // Update in tasks (in memory)
-  // Update in localStorage
-}
+})
