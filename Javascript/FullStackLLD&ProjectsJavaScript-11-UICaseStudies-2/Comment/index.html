@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Comment</title>
+        <style>
+            .comment{
+                border: 1px solid #ccc;
+                padding: 5px;
+            }
+            .main-comment, .sub-comments{
+                margin-bottom: 10px;
+            }
+            .sub-comments{
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="commentContainer">
+            <div class="comment">
+                <div class="main-comment">
+                    <p class="text-bold name">Sadanand</p>
+                    <p class="comment-text">Hello World</p>
+                    <div class="btn-holder">
+                        <button class="btn btn-primary small reply">Reply</button>
+                    </div>
+                </div>
+                <div class="sub-comments"></div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
