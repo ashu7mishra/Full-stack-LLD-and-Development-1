@@ -8,8 +8,8 @@ const getForm = () =>{
             <input type="text" placeholder="Your Name">
             <textarea placeholder="comment"></textarea>
             <div class="form-buttons">
-                <button>Post</button>
-                <button>Cancel</button>
+                <button class="post">Post</button>
+                <button class="cancel">Cancel</button>
             </div>
         </div>
     `;
@@ -50,19 +50,29 @@ function generateCommentWithForm(content, divRef){
     divRef.appendChild(contentDivRef);
 }
 
-function createDefaultComment(){
-    const defaultContent = getContent('Ashutosh', 'First Comment');
-    generateCommentWithContent(defaultContent, commentContainer);
+function createComment(name, description, ref){
+    const defaultContent = getContent(name, description);
+    generateCommentWithContent(defaultContent, ref);
 }
 
-createDefaultComment();
+createComment('Ashutosh', 'FirstComment', commentContainer);
 
 commentContainer.addEventListener('click', function(ev){
     if(ev.target.classList.contains('reply')){
         const formData = getForm();
         const parentCommentRef = ev.target.closest('.comment');
-        const subCommentRef = parentCommentRef.querySelector('& > .sub-comments .comment')
+        const subCommentRef = parentCommentRef.querySelector('.sub-comments');
         generateCommentWithForm(formData, subCommentRef);
+    }
+
+    if(ev.target.classList.contains('post')){
+        const formRef = ev.target.closest('.form');
+        const inputValue = formRef.querySelector('input').value;
+        const textAreaValue = formRef.querySelector('textarea').value;
+        const subCommentRef = ev.target.closest('.sub-comment');
+        const commentWithFormRef = ev.target.closest('.comment');
+        createComment(inputValue, textAreaValue, subCommentRef);
+        commentWithFormRef.remove();
     }
 })
 
