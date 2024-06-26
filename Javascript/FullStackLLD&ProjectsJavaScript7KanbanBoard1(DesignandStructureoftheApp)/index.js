@@ -16,6 +16,7 @@ let tasks;
 function initializeLocalStorage(){
   const tasks = getTasksFromLocalStorage();
   if (!tasks){
+    
     updateTasksInLocalStorage([
       {
         id: (new ShortUniqueId())(),
