@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    setTimeout
+    <button>Cancel Timer</button>
+    <script>
+        const timeoutRef = setInterval(() => {
+            console.log("Helllllllloooooooo...........");
+        },3000);
+
+        const buttonRef = document.querySelector('button');
+        buttonRef.addEventListener('click', function(){
+            clearInterval(timeoutRef);
+        })
+    </script>
+</body>
+</html>
