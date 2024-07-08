@@ -10,9 +10,13 @@ let obj = {
     name : 'Ashu',
     city: 'Pune',
     getThis: function(){
-        console.log(this);
+        function test(){
+            console.log(this);
+        }
+        test();
     }
 }
+obj.getThis();
 
 let objFn = obj.getThis;
 objFn();
