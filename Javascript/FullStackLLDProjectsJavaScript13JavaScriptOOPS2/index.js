@@ -32,3 +32,19 @@ Car.prototype.getColor = function(){
 }
 
 BMW.getColor();
+
+
+class SuperCar extends Car {
+    constructor(price, feature, model, color){
+        super(model, color);
+        this.price = price;
+        this.feature = [];
+    }
+
+    getOnRoadPrice(){
+        return this.price + 100000;
+    }
+}
+
+const BMW2 = new SuperCar(200000000, ['F1', 'F2', 'F3'], 'X1', 'Black');
+const MER2 = new SuperCar(100000000, ['F4', 'F5', 'F6'], 'A1', 'Blue');
