@@ -44,6 +44,10 @@ class SuperCar extends Car {
     getOnRoadPrice(){
         return this.price + 100000;
     }
+
+    hasOwnProperty(){
+        return 'mujhe kya pta'
+    }
 }
 
 const BMW2 = new SuperCar(200000000, ['F1', 'F2', 'F3'], 'X1', 'Black');
