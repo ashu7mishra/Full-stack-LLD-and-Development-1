@@ -14,6 +14,15 @@ class Car1 {
             return this.getColor;
         }
     }
+    getModel(){
+        return this.model;
+    }
 }
 
 const BMW1 = new Car1('X1', 'Red');
+
+Car.prototype.getColor = function(){
+    return this.model
+}
+
+BMW.getColor();
