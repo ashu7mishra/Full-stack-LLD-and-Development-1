@@ -17,7 +17,13 @@ class Car1 {
     getModel(){
         return this.model;
     }
+
+    static getArea(radius){
+        return 3.14*radius*radius;
+    }
 }
+
+console.log(Car1.getArea(10));
 
 const BMW1 = new Car1('X1', 'Red');
 
