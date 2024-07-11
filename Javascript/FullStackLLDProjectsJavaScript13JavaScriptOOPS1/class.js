@@ -51,3 +51,21 @@ const BMW = new Car('BMW', 'Red');
 console.log(BMW);
 console.log(global.color);
 console.log(BMW.color);
+
+function total(satateTax, centralTax){
+    return this.num1 + this.num2 + satateTax + centralTax;
+}
+
+console.log(total());
+
+const data1 = {
+    num1: 10,
+    num2: 20,
+}
+
+console.log(total.call(data1, 30 ,40));
+console.log(total.apply(data1, [30 ,40]));
+
+const totalBind = total.bind(data1);
+
+console.log(totalBind(40,50));
