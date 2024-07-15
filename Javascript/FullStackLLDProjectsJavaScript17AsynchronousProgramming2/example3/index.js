@@ -1,12 +1,13 @@
-console.log('A');
-console.log('B');
-setTimeout(() => {
-    console.log('C');
-}, 1000);
+// console.log('A');
+// console.log('B');
+// setTimeout(() => {
+//     console.log('C');
+// }, 1000);
 
-setTimeout(() => {
-    console.log('D');
-}, 0);
-console.log('E');
-Promise.resolve().then(() => console.log('F'));
-console.log('G');
+// setTimeout(() => {
+//     console.log('D');
+// }, 0);
+// console.log('E');
+// Promise.resolve().then(() => console.log('F'));
+// console.log('G');
+
