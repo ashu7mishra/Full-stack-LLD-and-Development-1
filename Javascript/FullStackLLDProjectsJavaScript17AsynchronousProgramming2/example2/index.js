@@ -48,8 +48,19 @@
         })
     }
 
-    myFetch(3)
-        .then((data) => console.log('Success > ', data))
+    myFetch(10)
+        .then((data) => {
+            console.log('Success');
+            return data;
+        })
+        .then((list) => {
+            const productCount = list.length;
+            console.log(list);
+            return productCount;
+        })
+        .then((productCount) => {
+            console.log(productCount);
+        })
         .catch((error) => console.log('Failure >', error));
 
 let count = 0;
