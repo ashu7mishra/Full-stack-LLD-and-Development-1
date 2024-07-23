@@ -13,7 +13,9 @@ var obj1 = {
     city: 'Pune'
 };
 
-var obj2 = obj1;
+// var obj2 = {...obj1}; //shallow copy
+// var obj2 = Object.assign({}, obj1); //shallow copy
+// var obj2 = JSON.parse(JSON.stringify(obj1)); //deep copy but this doesn't work with functions.
 obj2.city = 'London';
 
-console.log(obj1, obj2)
+console.log(obj1, obj2);
